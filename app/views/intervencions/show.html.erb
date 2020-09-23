@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Plantacion:</strong>
+  <%= @intervencion.plantacion_id %>
+</p>
+
+<p>
+  <strong>Accion:</strong>
+  <%= @intervencion.accion %>
+</p>
+
+<%= link_to 'Edit', edit_intervencion_path(@intervencion) %> |
+<%= link_to 'Back', intervencions_path %>

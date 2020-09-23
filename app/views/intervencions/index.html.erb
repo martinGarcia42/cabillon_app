@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Intervencions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Plantacion</th>
+      <th>Accion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @intervencions.each do |intervencion| %>
+      <tr>
+        <td><%= intervencion.plantacion_id %></td>
+        <td><%= intervencion.accion %></td>
+        <td><%= link_to 'Show', intervencion %></td>
+        <td><%= link_to 'Edit', edit_intervencion_path(intervencion) %></td>
+        <td><%= link_to 'Destroy', intervencion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Intervencion', new_intervencion_path %>

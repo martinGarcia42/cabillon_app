@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Parcela:</strong>
+  <%= @plantacion.parcela_id %>
+</p>
+
+<p>
+  <strong>Cultivo:</strong>
+  <%= @plantacion.cultivo %>
+</p>
+
+<p>
+  <strong>Variedad:</strong>
+  <%= @plantacion.variedad %>
+</p>
+
+<p>
+  <strong>Numplantas:</strong>
+  <%= @plantacion.numplantas %>
+</p>
+
+<p>
+  <strong>Observaciones:</strong>
+  <%= @plantacion.observaciones %>
+</p>
+
+<%= link_to 'Edit', edit_plantacion_path(@plantacion) %> |
+<%= link_to 'Back', plantacions_path %>

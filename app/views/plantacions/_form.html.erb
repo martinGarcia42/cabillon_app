@@ -1,0 +1,42 @@
+<%= form_with(model: plantacion, local: true) do |form| %>
+  <% if plantacion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(plantacion.errors.count, "error") %> prohibited this plantacion from being saved:</h2>
+
+      <ul>
+        <% plantacion.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :parcela_id %>
+    <%= form.text_field :parcela_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cultivo %>
+    <%= form.text_field :cultivo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :variedad %>
+    <%= form.text_field :variedad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numplantas %>
+    <%= form.text_field :numplantas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :observaciones %>
+    <%= form.text_field :observaciones %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

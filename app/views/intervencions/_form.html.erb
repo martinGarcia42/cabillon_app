@@ -1,0 +1,27 @@
+<%= form_with(model: intervencion, local: true) do |form| %>
+  <% if intervencion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(intervencion.errors.count, "error") %> prohibited this intervencion from being saved:</h2>
+
+      <ul>
+        <% intervencion.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :plantacion_id %>
+    <%= form.text_field :plantacion_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :accion %>
+    <%= form.text_field :accion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

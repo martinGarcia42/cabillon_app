@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Plantacions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parcela</th>
+      <th>Cultivo</th>
+      <th>Variedad</th>
+      <th>Numplantas</th>
+      <th>Observaciones</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @plantacions.each do |plantacion| %>
+      <tr>
+        <td><%= plantacion.parcela_id %></td>
+        <td><%= plantacion.cultivo %></td>
+        <td><%= plantacion.variedad %></td>
+        <td><%= plantacion.numplantas %></td>
+        <td><%= plantacion.observaciones %></td>
+        <td><%= link_to 'Show', plantacion %></td>
+        <td><%= link_to 'Edit', edit_plantacion_path(plantacion) %></td>
+        <td><%= link_to 'Destroy', plantacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Plantacion', new_plantacion_path %>
