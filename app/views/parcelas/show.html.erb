@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @parcela.nombre %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @parcela.tipo %>
+</p>
+
+<%= link_to 'Edit', edit_parcela_path(@parcela) %> |
+<%= link_to 'Back', parcelas_path %>

@@ -1,0 +1,27 @@
+<%= form_with(model: parcela, local: true) do |form| %>
+  <% if parcela.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(parcela.errors.count, "error") %> prohibited this parcela from being saved:</h2>
+
+      <ul>
+        <% parcela.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo %>
+    <%= form.text_field :tipo %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
