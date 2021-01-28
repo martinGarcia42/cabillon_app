@@ -1,5 +1,7 @@
 class PlantacionsController < ApplicationController
+  before_action :set_parcela, only: [:new, :create]
   before_action :set_plantacion, only: [:show, :edit, :update, :destroy]
+ 
 
   # GET /plantacions
   # GET /plantacions.json
@@ -65,6 +67,10 @@ class PlantacionsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_plantacion
       @plantacion = Plantacion.find(params[:id])
+    end
+
+    def set_parcela
+      @parcela = Parcela.find_by(id: params[:parcela_id]) || Parcela.find(plantacion_params[:parcela_id])
     end
 
     # Only allow a list of trusted parameters through.

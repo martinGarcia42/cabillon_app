@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :parcela_id %>
-    <%= form.text_field :parcela_id %>
+    
+    <%= form.hidden_field :parcela_id, value: @plantacion.parcela_id %>
   </div>
 
   <div class="field">
